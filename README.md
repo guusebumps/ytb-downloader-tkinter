@@ -1,58 +1,44 @@
 
 # YouTube Video and Audio Downloader
 
-This Python script allows users to download YouTube videos or audio (MP3) using a simple graphical user interface (GUI) built with Tkinter.
+This Python script provides a simple graphical interface for downloading YouTube videos and converting them to MP3 files with various quality options. It uses the `yt-dlp` library for handling video downloads and `tkinter` for the graphical interface.
 
 ## Features
-- Download YouTube videos in the highest available resolution.
-- Convert YouTube videos to MP3 audio.
-- Choose the destination folder for downloaded files.
-- User-friendly interface using Tkinter.
+- Download YouTube videos in MP4 format (best available resolution).
+- Convert YouTube videos to MP3 format with the following quality options: 64K, 128K, 192K, 256K, 320K.
+- Graphical interface for easy interaction and input.
 
 ## Requirements
 
 - Python 3.x
-- Libraries:
-  - pytube
-  - tkinter (usually pre-installed with Python)
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp) - You can install it using pip:
+  ```bash
+  pip install yt-dlp
+  ```
+- [FFmpeg](https://ffmpeg.org/download.html) - Required for MP3 conversion.
+  - On Windows, download FFmpeg, extract it, and set the path in the system environment variables, or specify the path in the script.
 
 ## Installation
 
-1. Clone this repository:
-
+1. Clone the repository or download the script.
+2. Make sure you have Python installed.
+3. Install the required libraries by running:
+   ```bash
+   pip install yt-dlp
    ```
-   git clone https://github.com/guusebumps/youtube-downloader.git
-   ```
+4. Download and install FFmpeg, if you're converting videos to MP3.
 
-2. Navigate to the project directory:
+## Running the Script
 
-   ```
-   cd youtube-downloader
-   ```
-
-3. Install the required Python packages:
-
-   ```
-   pip install pytube
-   ```
-
-## Usage
-
-1. Run the script:
-
-   ```
+1. Open a terminal or command prompt.
+2. Run the script:
+   ```bash
    python youtube_downloader.py
    ```
-
-2. Enter the URL of the YouTube video you want to download.
-
-3. Select whether you want to download the video or convert it to audio (MP3).
-
-4. Choose the destination folder where the file will be saved.
-
-5. Click "Download" to start the process.
+3. A graphical interface will open where you can paste the YouTube video URL, choose the format (Video or MP3), and select the download location.
 
 ## Notes
 
-- For audio downloads, the script will automatically convert the downloaded file to `.mp3` format.
-- Make sure you have a stable internet connection for downloading videos.
+- If you encounter an error regarding FFmpeg not being found, make sure to install FFmpeg and either set the path in your system's environment variables or specify the path in the script.
+- The script is compatible with Windows, macOS, and Linux.
+

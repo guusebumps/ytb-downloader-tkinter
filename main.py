@@ -49,7 +49,8 @@ tk.Radiobutton(root, text="Download Video", variable=download_type, value="Video
 tk.Radiobutton(root, text="Download MP3", variable=download_type, value="MP3").grid(row=1, column=1, padx=10, pady=5)
 
 tk.Label(root, text="MP3 Quality (kbps):").grid(row=2, column=0, padx=10, pady=5)
-quality = tk.StringVar(value="320")
+quality = tk.StringVar(value="256")
+# quality = tk.StringVar(value="320")
 quality_options = tk.OptionMenu(root, quality, "64", "128", "192", "256", "320")
 quality_options.grid(row=2, column=1, padx=10, pady=5)
 
